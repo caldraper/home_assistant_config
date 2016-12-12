@@ -1,0 +1,143 @@
+Humans:
+    entities:
+      - device_tracker.JW_Nexus6p
+      - device_tracker.AD_Nexus6p
+
+Weather:
+   view: yes
+   entities:
+   - sensor.date__time
+   - sensor.forecastio_icon
+   - sensor.forecastio_condition
+   - sensor.forecastio_summary
+   - sun.sun
+   - sensor.forecastio_dew_point
+   - sensor.forecastio_precip_type
+   - sensor.forecastio_precip
+   - sensor.forecastio_pressure
+   - sensor.forecastio_nearest_storm_distance
+   - sensor.forecastio_wind_speed
+
+Switches:
+   view: yes
+   entities:
+   - switch.bedroom_fan
+   - switch.guestroom_fan
+   - switch.lr_fan
+   - switch.kombucha_mat
+   - switch.6p_charger
+   - switch.office_light
+   - switch.stove_right
+   - switch.stove_left
+   - switch.sink_right
+   - switch.sink_left
+   - switch.pantry
+   - switch.ad_nightstand
+
+cabinet_lighting:
+   - switch.stove_right
+   - switch.stove_left
+   - switch.sink_right
+   - switch.sink_left
+
+Anthony:
+   view: yes
+   entities:
+   - sensor.battery_6p
+   - sensor.battery_n7
+   - sensor.battery_n7_2
+   - device_tracker.AD_Nexus6p
+   - device_tracker.AD_Nexus7
+   - device_tracker.ad_nexus7_2
+   - input_select.anthony_status
+   - input_select.ad_6p_status
+   - group.ad_breaches
+
+JW:
+   view: yes
+   entities:
+   - device_tracker.JW_Nexus6p
+   - device_tracker.JW_Nexus7
+   - group.jw_breaches
+
+Media:
+   entities:
+   - media_player.living_room
+   - media_player.guest_room
+   - media_player.kitchen
+   - media_player.bathroom
+   - media_player.office
+   - media_player.kodi
+
+Devices:
+   view: yes
+   entities:
+   - group.anthony
+   - group.jw
+   - group.media
+
+Environment:
+   view: yes
+   entities:
+   - thermostat.living_room
+   - sensor.living_room_humidity
+   - sensor.living_room_mode
+   - sensor.living_room_target
+   - sensor.living_room_apparent_temperature
+
+Computers:
+   view: yes
+   entities:
+   - switch.gigabyte
+   - switch.gitlab
+   - switch.kodi
+   - switch.synapse
+   - switch.g7
+
+Office:
+   view: yes
+   entities:
+   - switch.office_light
+   - media_player.office
+   - sensor.office_temp
+   - sensor.office_humidity
+
+Kitchen:
+   view: yes
+   entities:
+   - group.cabinet_lighting
+   - media_player.kitchen
+   - switch.kombucha_mat
+   - switch.pantry
+
+Bedroom:
+   view: yes
+   entities:
+   - switch.bedroom_fan
+   - switch.6p_charger
+   - switch.ad_nightstand
+   - sensor.bedroom_temp
+   - sensor.bedroom_humidity
+   - sensor.bathroom_temp
+   - sensor.bathroom_humidity
+
+Guestroom:
+   view: yes
+   entities:
+   - switch.guestroom_fan
+   - media_player.guest_room
+    
+Livingroom:
+   view: yes
+   entities:
+   - switch.lr_fan
+   - group.environment
+   - media_player.kodi
+   - media_player.roku_yy00dk366469
+
+Air Filters:
+   view: yes
+   entities:
+   - switch.guestroom_fan
+   - switch.lr_fan
+   - switch.bedroom_fan

@@ -1,0 +1,7 @@
+alias: "Rainbow Swirl"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Rainbow Swirl"
+action:
+  service: shell_command.h_rainbow_swirl

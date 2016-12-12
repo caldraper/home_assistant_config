@@ -1,0 +1,75 @@
+- platform: time_date
+  display_options:
+    - "date_time"
+- platform: twitch
+  channels:
+    - iliketomakestuff
+- platform: command_line
+  name: CPU Temp
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  value_template: '{{ value | multiply(0.001) }}'
+- platform: mqtt
+  state_topic: "owntracks/mobile/AD_Nexus6p"
+  name: "Battery_6p"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+- platform: mqtt
+  state_topic: "owntracks/mobile/AD_Nexus7"
+  name: "Battery_N7"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+- platform: mqtt
+  state_topic: "owntracks/mobile/AD_Nexus7_2"
+  name: "Battery_N7_2"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+- platform: mqtt
+  state_topic: "/office/humidity"
+  name: "Office_Humidity"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "/office/temp"
+  name: "Office_Temp"
+  unit_of_measurement: "°F"
+- platform: mqtt
+  state_topic: "/bedroom/humidity"
+  name: "Bedroom Humidity"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "/bedroom/temp"
+  name: "Bedroom Temp"
+  unit_of_measurement: "°F"
+- platform: mqtt
+  state_topic: "/bathroom/humidity"
+  name: "Bathroom Humidity"
+  unit_of_measurement: "%"
+- platform: mqtt
+  state_topic: "/bathroom/temp"
+  name: "Bathroom Temp"
+  unit_of_measurement: "°F"
+- platform: nest
+  monitored_conditions:
+   - 'temperature'
+   - 'target'
+   - 'humidity'
+   - 'operation_mode'
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: processor_use
+    - type: ipv4_address
+      arg: eth0
+- platform: synologydsm
+  host: 10.10.10.109
+  username: !secret synology_user
+  password: !secret synology_pass
+  monitored_conditions:
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - network_down
+    - disk_temp
+    - volume_percentage_used

@@ -1,0 +1,7 @@
+alias: "State Refresh"
+trigger:
+  - platform: time
+    minutes: '/10'
+    seconds: 0
+action:
+  service: script.refresh_devices

@@ -1,0 +1,138 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # C for Celsius, F for Fahrenheit
+  temperature_unit: F
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 290
+  customize: !include customize.yaml
+  unit_system: imperial
+
+http:
+  api_password: !secret api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+
+zone 1:
+  name: Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 100
+  icon: mdi:worker
+
+zone 2:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 100
+  icon: mdi:home
+
+# Enables support for tracking state changes over time.
+history:
+
+recorder:
+  purge_days: 30
+  db_url: mysql://ha:ha@10.10.10.122/ha
+
+# Discover some devices automatically
+#discovery:
+
+# Checks for available updates
+updater:
+
+# Enables the frontend
+frontend:
+
+# View all events in a logbook
+logbook:
+
+# Prediction of weather
+sensor: !include sensors.yaml
+
+# Track the sun
+sun:
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+media_player:
+ - platform: kodi
+   host: http://10.10.10.190
+   port: 8080
+   name: Kodi
+ - platform: cast
+   host: 10.10.10.50
+ - platform: cast   
+   host: 10.10.10.51
+ - platform: cast
+   host: 10.10.10.52
+ - platform: cast
+   host: 10.10.10.53
+ - platform: cast
+   host: 10.10.10.54
+ - platform: roku
+   host: 10.10.10.112
+
+notify:
+  platform: pushbullet
+  api_key: !secret pushbullet_api
+
+nest:
+  username: !secret nest_user
+  password: !secret nest_pass
+
+climate:
+  platform: nest
+
+mqtt:
+  broker: 10.10.10.122
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: ha
+  password: ha
+
+device_tracker:
+ - platform: ddwrt
+   consider_home: 60
+   interval_seconds: 30
+   host: 10.10.10.1
+   username: !secret dd-wrt_user
+   password: !secret dd-wrt_pass
+   track_new_devices: no
+ - platform: owntracks
+   max_gps_accuracy: 100
+ - platform: automatic
+   client_id: !secret automatic_client_id
+   secret: !secret automatic_secret
+   username: !secret automatic_username
+   password: !secret automatic_password
+
+automation: !include automation.yaml
+
+switch: !include switches.yaml
+
+group: !include groups.yaml
+
+ifttt:
+  key: !secret ifttt_key
+
+script: !include scripts.yaml
+
+binary_sensor:
+  platform: nest
+  monitored_conditions:
+    - 'fan'
+    - 'hvac_ac_state'
+    - 'hvac_aux_heater_state'
+    - 'online'
+    
+input_select: !include input_select.yaml
+
+shell_command: !include shell_commands.yaml
+
+#mqtt_eventstream:
+#  publish_topic: /ha/eventstream

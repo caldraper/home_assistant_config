@@ -1,0 +1,20 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Anthony
+    message: is going to bed
+- service: switch.turn_on
+  data:
+    entity_id: switch.6p_charger
+- service: switch.turn_on
+  data:
+    entity_id: switch.ad_nightstand
+- service: switch.turn_on
+  data:
+    entity_id: switch.bedroom_fan
+- delay:
+    minutes: 7
+- service: switch.turn_off
+  data:
+    entity_id: switch.ad_nightstand
+

@@ -1,0 +1,7 @@
+alias: "Running Dots"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Running Dots"
+action:
+  service: shell_command.h_running_dots

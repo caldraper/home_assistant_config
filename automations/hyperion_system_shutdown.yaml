@@ -1,0 +1,7 @@
+alias: "System Shutdown"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "System Shutdown"
+action:
+  service: shell_command.h_system_shutdown

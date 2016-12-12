@@ -1,0 +1,8 @@
+alias: "Turn Off Fan - Cast" 
+trigger:
+  platform: state
+  entity_id: media_player.living_room
+  state: "playing"
+action:
+  service: switch.turn_off
+  entity_id: switch.lr_fan

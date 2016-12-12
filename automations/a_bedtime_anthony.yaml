@@ -1,0 +1,7 @@
+alias: "Anthony Bedtime"
+trigger:
+  platform: state
+  entity_id: input_select.anthony_status
+  state: "sleeping"
+action:
+  service: script.bedtime_anthony

@@ -1,0 +1,18 @@
+ alias: "Device Refresh"
+ sequence:
+   - service: mqtt.publish
+     data:
+       topic: "owntracks/mobile/AD_Nexus6p/cmd"
+       payload_template: '{"_type":"cmd","action":"reportLocation"}'
+   - service: mqtt.publish
+     data:
+       topic: "owntracks/mobile/AD_Nexus7/cmd"
+       payload_template: '{"_type":"cmd","action":"reportLocation"}'
+   - service: mqtt.publish
+     data:
+       topic: "owntracks/mobile/AD_Nexus7_2/cmd"
+       payload_template: '{"_type":"cmd","action":"reportLocation"}'
+   - service: mqtt.publish
+     data:
+       topic: "/lights/kitchen/command"
+       payload: "status"

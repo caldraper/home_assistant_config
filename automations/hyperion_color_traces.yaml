@@ -1,0 +1,7 @@
+alias: "Color Traces"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Color Traces"
+action:
+  service: shell_command.h_color_traces

@@ -1,0 +1,14 @@
+alias: "Sunset - Cabinet Lights On"
+trigger:
+  - platform: sun
+    event: sunset
+condition:
+  condition: state
+  entity_id: group.humans
+  state: "home"
+action:
+  service: switch.turn_on
+  entity_id: 
+    - group.cabinet_lighting
+    - switch.tree_solid_lights
+    - switch.tree_twinkle_lights

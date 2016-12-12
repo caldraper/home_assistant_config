@@ -1,0 +1,8 @@
+alias: "Turn Off Fan - Roku" 
+trigger:
+  platform: state
+  entity_id: media_player.roku_yy00dk366469
+  state: "playing"
+action:
+  service: switch.turn_off
+  entity_id: switch.lr_fan

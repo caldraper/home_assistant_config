@@ -1,0 +1,20 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Anthony
+    message: is awake
+- service: switch.turn_off
+  data:
+    entity_id: switch.6p_charger
+- service: switch.turn_off
+  data:
+    entity_id: switch.ad_nightstand
+- service: switch.turn_on
+  data:
+    entity_id: group.cabinet_lighting
+- service: switch.turn_on
+  data:
+    entity_id: switch.lr_fan
+- service: switch.turn_on
+  data:
+    entity_id: switch.pantry_light

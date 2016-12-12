@@ -1,0 +1,7 @@
+alias: "Police Lights Single"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Police Lights Single"
+action:
+  service: shell_command.h_police_lights_single

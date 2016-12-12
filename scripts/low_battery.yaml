@@ -1,0 +1,11 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: EVENT
+    message: "Low battery Event"
+- service: notify.notify
+  data:
+    message: "{% if states('sensor.Battery_6p') < '20'%}Low battery detected! Nexus 6p battery is at {{states('sensor.Battery_6p')}}%{% else %} {% endif %} {% if states('sensor.Battery_N7') < '20'%}Low battery detected! Nexus 7 battery is at {{states('sensor.Battery_N7')}}%{% else %} {% endif %}"
+- service: switch.turn_on
+  data:
+    entity_id: switch.6p_charger

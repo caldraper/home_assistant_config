@@ -1,0 +1,7 @@
+alias: "N7 low battery"
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.Battery_N7
+    below: 20
+action:
+  service: script.low_battery

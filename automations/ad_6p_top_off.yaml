@@ -1,0 +1,9 @@
+alias: "ad_6p_top_off"
+trigger:
+  platform: time
+  hours: 4
+  minutes: 1
+  seconds: 0
+action:
+  - service: switch.turn_on
+    entity_id: switch.6p_charger

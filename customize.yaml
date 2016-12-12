@@ -1,0 +1,100 @@
+########CUSTOMIZE SENSORS########
+####WEATHER####
+     sensor.weather_cloud_coverage:
+        friendly_name: Cloud Coverage
+        icon: mdi:cloud
+     sensor.weather_humidity:
+        friendly_name: Outdoor
+        icon: mdi:water
+     sensor.weather_pressure:
+        friendly_name: Barometric Pressure
+        icon: mdi:nature
+     sensor.weather_temperature:
+        icon: mdi:thermometer
+        friendly_name: Outdoor
+     sensor.weather_wind_speed:
+        icon: mdi:weather-windy
+        friendly_name: Wind Speed
+     sensor.weather_summary:
+        friendly_name: Condition
+     sensor.weather_precip_probability:
+        friendly_name: Precipitation Probability
+     sensor.weather_precip:
+        friendly_name: Precipitation Type
+     sensor.weather_precip_intensity:
+        friendly_name: Precipitation Intensity
+     sensor.weather_visibility:
+        friendly_name: Visibility
+     sensor.weather_wind_bearing:
+        friendly_name: Wind Bearing
+        icon: mdi:compass
+     sensor.weather_apparent_temperature:
+        friendly_name: Real Feel
+####MISC####
+     sensor.date__time:
+        icon: mdi:calendar-clock
+####SWITCHES####
+     switch.6p_charger:
+        friendly_name: Anthony's Phone Charger
+        icon: mdi:battery-charging
+     switch.ad_nightstand:
+        friendly_name: Anthony's Bedside Lamp
+        icon: mdi:lightbulb
+     switch.bedroom_fan:
+        friendly_name: Bedroom Air Filter
+        icon: mdi:fan
+     switch.guestroom_fan:
+        friendly_name: Guestroom Air Filter
+        icon: mdi:fan
+     switch.lr_fan:
+        friendly_name: Livingroom Air Filter
+        icon: mdi:fan
+     switch.office_light:
+        friendly_name: Office Lamp
+        icon: mdi:lightbulb
+     switch.kombucha_mat:
+        friendly_name: Kombucha Heat Mat
+        icon: mdi:radiator
+     switch.stove_right:
+        friendly_name: Stove Right Lighting
+        icon: mdi:lightbulb
+     switch.stove_left:
+        friendly_name: Stove Left Lighting
+        icon: mdi:lightbulb
+     switch.sink_right:
+        friendly_name: Sink Right Lighting
+        icon: mdi:lightbulb
+     switch.sink_left:
+        friendly_name: Sink Left Lighting
+        icon: mdi:lightbulb
+     switch.pantry:
+        friendly_name: Pantry Light
+        icon: mdi:lightbulb
+####SENSORS####
+     thermostat.living_room:
+       entity_picture: https://dl.dropboxusercontent.com/u/911300/nest.jpg
+       friendly_name: Nest
+####GROUPS####
+     group.cabinet_lighting:
+       friendly_name: Under Cabinet Lights
+       icon: mdi:white-balance-incandescent
+####COMPUTERS####
+     switch.gigabyte:
+       friendly_name: Gigabyte
+       icon: mdi:desktop-tower
+     switch.g7:
+       friendly_name: G7-1070us
+       icon: mdi:laptop
+     switch.gitlab:
+       friendly_name: Gitlab Server
+       icon: mdi:github-circle
+     switch.kodi:
+       friendly_name: Kodi Media Center
+       icon: mdi:cast-connected
+     switch.synology:
+       friendly_name: Synology NAS
+       icon: mdi:server-network
+####MEDIA####
+     media_player.Roku_YY00DK366469:
+       friendly_name: Roku
+     

@@ -1,0 +1,7 @@
+alias: "Knight Rider"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Knight Rider"
+action:
+  service: shell_command.h_knight_rider

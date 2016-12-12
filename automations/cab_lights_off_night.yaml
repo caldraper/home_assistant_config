@@ -1,0 +1,8 @@
+alias: "Overnight - Cabinet Lights Off"
+trigger:
+  - platform: time
+    hours: 1
+    minutes: 30
+    seconds: 0
+action:
+  service: script.cab_lights_off_night

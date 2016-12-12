@@ -1,0 +1,10 @@
+alias: "Sunrise - Cabinet Lights Off"
+trigger:
+  - platform: sun
+    event: sunrise
+action:
+  service: switch.turn_off
+  entity_id: 
+    - group.cabinet_lighting
+    - switch.tree_twinkle_lights
+    - switch.tree_solid_lights

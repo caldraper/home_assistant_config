@@ -1,0 +1,10 @@
+alias: "Suspend Gigabyte"
+trigger:
+  platform: state
+  entity_id: switch.gigabyte
+condition:
+  condition: state
+  entity_id: switch.gigabyte
+  state: "on"
+action:
+  service: shell_command.suspend_gigabyte

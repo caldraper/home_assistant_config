@@ -1,0 +1,43 @@
+anthony_status:
+  name: Anthony Status
+  options:
+   - driving
+   - standby
+   - sleeping
+  initial: standby
+
+ad_6p_status:
+  name: Anthony 6p Status
+  options:
+   - charging
+   - not charging
+  initial: not charging
+  
+hyperion_effect:
+  name: Hyperion Effect
+  options:
+   - "Knight Rider"
+   - "Mood Blobs Blue"
+   - "Mood Blobs Cold"
+   - "Mood Blobs Full Color"
+   - "Mood Blobs Green"
+   - "Mood Blobs Rainbow"
+   - "Mood Blobs Red"
+   - "Mood Blobs Warm"
+   - "Off"
+   - "Rainbow Swirl"
+   - "Snake"
+   - "Strobe Blue"
+   - "Strobe Raspberry"
+   - "Strobe White"
+   - "Cinema Dim Lights"
+   - "Cinema Brighten Lights"
+   - "Police Lights Single"
+   - "Police Lights Solid"
+   - "Random"
+   - "Running Dots"
+   - "System Shutdown"
+   - "Sparks Color"
+   - "Sparks"
+   - "Color Traces"
+  initial: "Off"

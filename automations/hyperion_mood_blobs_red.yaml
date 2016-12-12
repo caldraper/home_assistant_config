@@ -1,0 +1,7 @@
+alias: "Mood Blobs Red"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Mood Blobs Red"
+action:
+  service: shell_command.h_mood_blobs_red

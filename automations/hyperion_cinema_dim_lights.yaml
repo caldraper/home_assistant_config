@@ -1,0 +1,7 @@
+alias: "Cinema Dim Lights"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Cinema Dim Lights"
+action:
+  service: shell_command.h_cinema_dim_lights

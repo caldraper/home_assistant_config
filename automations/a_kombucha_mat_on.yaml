@@ -1,0 +1,8 @@
+alias: "Turn on Kombucha mat"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.living_room_temperature
+  below: 69
+action:
+  service: switch.turn_on
+  entity_id: switch.Kombucha_mat

@@ -1,0 +1,11 @@
+alias: "ad_6p_charged"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.Battery_6p
+  above: 70
+condition:
+  condition: time
+  after: '20:00:00'
+action:
+  - service: switch.turn_off
+    entity_id: switch.6p_charger

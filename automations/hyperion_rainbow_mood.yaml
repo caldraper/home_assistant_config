@@ -1,0 +1,7 @@
+alias: "Rainbow Mood"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Mood Blobs Rainbow"
+action:
+  service: shell_command.h_rainbow_mood

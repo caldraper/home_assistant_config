@@ -1,0 +1,29 @@
+sequence:
+- service: switch.turn_off
+  data:
+    entity_id: switch.stove_right
+- delay:
+    seconds: 20
+- service: switch.turn_off
+  data:
+    entity_id: switch.stove_left
+- delay:
+    seconds: 20
+- service: switch.turn_off
+  data:
+    entity_id: switch.sink_right
+- delay:
+    seconds: 20
+- service: switch.turn_off
+  data:
+    entity_id: switch.sink_left
+- service: switch.turn_off
+  data:
+    entity_id: switch.pantry
+- delay:
+    seconds: 20
+- service: switch.turn_off
+  data:
+    entity_id: 
+      - switch.tree_solid_lights
+      - switch.tree_twinkle_lights

@@ -1,0 +1,7 @@
+alias: "Sparks Color"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Sparks Color"
+action:
+  service: shell_command.h_sparks_color

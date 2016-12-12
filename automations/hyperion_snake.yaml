@@ -1,0 +1,7 @@
+alias: "Snake"
+trigger:
+  - platform: state
+    entity_id: input_select.hyperion_effect
+    state: "Snake"
+action:
+  service: shell_command.h_snake
