@@ -60,8 +60,6 @@
       arg: /
     - type: memory_use_percent
     - type: processor_use
-    - type: ipv4_address
-      arg: eth0
 - platform: synologydsm
   host: 10.10.10.109
   username: !secret synology_user
@@ -73,3 +71,27 @@
     - network_down
     - disk_temp
     - volume_percentage_used
+- platform: haveibeenpwned
+  email:
+    - <redacted>
+    - <redacted>
+    - <redacted>
+    - <redacted>
+    - <redacted>
+    - <redacted>
+- platform: waqi
+  locations:
+    - <redacted>
+- platform: darksky
+  api_key: !secret darksky_api_key
+  monitored_conditions:
+    - summary
+    - icon
+    - precip_probability
+    - precip_type
+    - precip_intensity
+    - temperature
+    - wind_speed
+    - humidity
+    - temperature_max
+    - temperature_min

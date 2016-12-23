@@ -3,20 +3,47 @@ Humans:
       - device_tracker.JW_Nexus6p
       - device_tracker.AD_Nexus6p
 
-Weather:
+weather:
+   name: Weather Conditions
+   entities:
+   - sun.sun
+   - sensor.dark_sky_icon
+   - sensor.dark_sky_summary
+   - sensor.dark_sky_temperature
+   - sensor.dark_sky_daily_high_temperature
+   - sensor.dark_sky_daily_low_temperature
+   - sensor.dark_sky_wind_speed
+   - sensor.dark_sky_humidity
+   - sensor.dark_sky_precip
+   - sensor.dark_sky_precip_intensity
+   - sensor.dark_sky_precip_probability
+   - sensor.waqi_maryvill_tennessee
+
+system_status:
+   name: System Status
    view: yes
    entities:
-   - sensor.date__time
-   - sensor.forecastio_icon
-   - sensor.forecastio_condition
-   - sensor.forecastio_summary
-   - sun.sun
-   - sensor.forecastio_dew_point
-   - sensor.forecastio_precip_type
-   - sensor.forecastio_precip
-   - sensor.forecastio_pressure
-   - sensor.forecastio_nearest_storm_distance
-   - sensor.forecastio_wind_speed
+   - group.system_state
+   - group.computers
+
+System_state:
+   name: System States
+   entities:
+   - sensor.date_time
+   - sensor.cpu_temp
+   - sensor.cpu_use
+   - sensor.cpu_load_total
+   - sensor.ram_use
+   - sensor.disk_use_
+   - sensor.ram_use
+   - sensor.volume_used_volume_1
+   - sensor.temperature_sda
+   - sensor.temperature_sdb
+   - sensor.temperature_sdc
+   - sensor.temperature_sdd
+   - sensor.network_down
+   - sensor.network_up
+   - sensor.memory_usage_real
 
 Switches:
    view: yes
@@ -33,8 +60,11 @@ Switches:
    - switch.sink_left
    - switch.pantry
    - switch.ad_nightstand
+   - switch.tree_solid_lights
 
 cabinet_lighting:
+   name: Under Cabinet Lighting
+   entities:
    - switch.stove_right
    - switch.stove_left
    - switch.sink_right
@@ -52,6 +82,22 @@ Anthony:
    - input_select.anthony_status
    - input_select.ad_6p_status
    - group.ad_breaches
+   - group.ad_devices
+   - group.twitch
+
+AD_Breaches:
+   name: Anthony's Data Breaches
+   entities:
+   - <redacted>
+   - <redacted>
+   - <redacted>
+   - <redacted>
+   - <redacted>
+
+JW_Breaches:
+   name: JW's Data Breaches
+   entities:
+   - <redacted>
 
 JW:
    view: yes
@@ -59,6 +105,7 @@ JW:
    - device_tracker.JW_Nexus6p
    - device_tracker.JW_Nexus7
    - group.jw_breaches
+   - group.jw_devices
 
 Media:
    entities:
@@ -69,71 +116,88 @@ Media:
    - media_player.office
    - media_player.kodi
 
-Devices:
-   view: yes
-   entities:
-   - group.anthony
-   - group.jw
-   - group.media
-
 Environment:
    view: yes
    entities:
-   - thermostat.living_room
-   - sensor.living_room_humidity
-   - sensor.living_room_mode
-   - sensor.living_room_target
-   - sensor.living_room_apparent_temperature
+   - group.livingroom_environment
+   - group.office_environment
+   - group.bedroom_environment
+   - group.weather
+
+livingroom_environment:
+   name: Living Room Environment
+   entities:
+   - sensor.living_room_thermostat_humidity
+   - sensor.living_room_thermostat_hvac_state
+   - sensor.living_room_thermostat_operation_mode
+   - sensor.living_room_thermostat_target
+   - sensor.living_room_thermostat_temperature
+   - binary_sensor.living_room_thermostat_fan
+   - binary_sensor.living_room_thermostat_has_leaf
+   - binary_sensor.living_room_thermostat_is_locked
+   - binary_sensor.living_room_thermostat_is_using_emergency_heat
+   - binary_sensor.living_room_thermostat_online
+
+office_environment:
+   name: Office Environment
+   entities:
+   - sensor.office_humidity
+   - sensor.office_temp
+
+bedroom_environment:
+   name: Bedroom Environment
+   entities:
+   - sensor.bedroom_humidity
+   - sensor.bedroom_temp
+   - sensor.bathroom_humidity
+   - sensor.bathroom_temp
 
 Computers:
-   view: yes
    entities:
    - switch.gigabyte
    - switch.gitlab
    - switch.kodi
    - switch.synapse
    - switch.g7
+   - switch.synology
 
 Office:
-   view: yes
    entities:
    - switch.office_light
-   - media_player.office
-   - sensor.office_temp
-   - sensor.office_humidity
+   - group.office_environment
 
 Kitchen:
-   view: yes
    entities:
    - group.cabinet_lighting
-   - media_player.kitchen
    - switch.kombucha_mat
    - switch.pantry
 
 Bedroom:
-   view: yes
    entities:
    - switch.bedroom_fan
    - switch.6p_charger
    - switch.ad_nightstand
-   - sensor.bedroom_temp
-   - sensor.bedroom_humidity
-   - sensor.bathroom_temp
-   - sensor.bathroom_humidity
+   - group.bedroom_environment
 
 Guestroom:
-   view: yes
    entities:
    - switch.guestroom_fan
-   - media_player.guest_room
     
 Livingroom:
-   view: yes
    entities:
    - switch.lr_fan
-   - group.environment
-   - media_player.kodi
-   - media_player.roku_yy00dk366469
+   - group.livingroom_environment
+
+rooms:
+   view: yes
+   name: Rooms
+   entities:
+   - group.livingroom
+   - group.office
+   - group.bedroom
+   - group.kitchen
+   - group.guestroom
+   - group.media
 
 Air Filters:
    view: yes
@@ -141,3 +205,24 @@ Air Filters:
    - switch.guestroom_fan
    - switch.lr_fan
    - switch.bedroom_fan
+
+ad_devices:
+   name: AD Devices
+   entities:
+   - device_tracker.ad_nexus6p
+   - device_tracker.ad_nexus7
+   - device_tracker.ad_nexus7_2
+   - sensor.battery_6p
+   - sensor.battery_n7
+   - sensor.battery_n7_2
+
+jw_devices:
+   name: JW Devices
+   entities:
+   - device_tracker.jw_nexus6p
+   - device_tracker.jw_nexus7
+
+twitch:
+   name: Twitch
+   entities:
+   - sensor.iliketomakestuff

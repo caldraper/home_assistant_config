@@ -81,8 +81,8 @@ notify:
   api_key: !secret pushbullet_api
 
 nest:
-  username: !secret nest_user
-  password: !secret nest_pass
+  client_id: !secret nest_product_id
+  client_secret: !secret nest_product_secret
 
 climate:
   platform: nest
@@ -115,6 +115,19 @@ automation: !include automation.yaml
 
 switch: !include switches.yaml
 
+light:
+ - platform: mqtt
+   name: "ESP LEDs"
+   command_topic: "esp/mqttstrip/setpower"
+   state_topic: "esp/mqttstrip/setpowerpub"
+   rgb_state_topic: "esp/mqttstrip/setcolorpub"
+   rgb_command_topic: "esp/mqttstrip/setcolor"
+   brightness_state_topic: "esp/mqttstrip/setbrightnesspub"
+   brightness_command_topic: "esp/mqttstrip/setbrightness"
+   optimistic: false
+ - platform: lifx
+   broadcast: 10.10.10.255
+
 group: !include groups.yaml
 
 ifttt:
@@ -131,6 +144,8 @@ binary_sensor:
     - 'online'
     
 input_select: !include input_select.yaml
+
+input_slider: !include input_slider.yaml
 
 shell_command: !include shell_commands.yaml
 
