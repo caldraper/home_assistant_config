@@ -75,6 +75,7 @@ media_player:
    host: 10.10.10.54
  - platform: roku
    host: 10.10.10.112
+ - platform: vlc
 
 notify:
   platform: pushbullet
@@ -148,6 +149,10 @@ input_select: !include input_select.yaml
 input_slider: !include input_slider.yaml
 
 shell_command: !include shell_commands.yaml
+
+tts:
+  - platform: voicerss
+    api_key: !secret voicerss_api_key
 
 #mqtt_eventstream:
 #  publish_topic: /ha/eventstream
