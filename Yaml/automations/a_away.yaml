@@ -18,3 +18,4 @@ action:
     - switch.6p_charger
     - switch.tree_solid_lights
     - switch.tree_twinkle_lights
+    - switch.pantry

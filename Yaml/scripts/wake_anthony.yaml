@@ -17,4 +17,4 @@ sequence:
     entity_id: switch.lr_fan
 - service: switch.turn_on
   data:
-    entity_id: switch.pantry_light
+    entity_id: switch.pantry
