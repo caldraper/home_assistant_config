@@ -59,7 +59,7 @@ Switches:
    - switch.sink_right
    - switch.sink_left
    - switch.pantry
-   - switch.ad_nightstand
+   - light.anthonys_nightstand
    - switch.tree_solid_lights
 
 cabinet_lighting:
@@ -176,7 +176,7 @@ Bedroom:
    entities:
    - switch.bedroom_fan
    - switch.6p_charger
-   - switch.ad_nightstand
+   - light.anthonys_nightstand
    - group.bedroom_environment
 
 Guestroom:

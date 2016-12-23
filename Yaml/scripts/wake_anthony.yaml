@@ -6,9 +6,9 @@ sequence:
 - service: switch.turn_off
   data:
     entity_id: switch.6p_charger
-- service: switch.turn_off
+- service: light.turn_off
   data:
-    entity_id: switch.ad_nightstand
+    entity_id: switch.anthonys_nightstand
 - service: switch.turn_on
   data:
     entity_id: group.cabinet_lighting

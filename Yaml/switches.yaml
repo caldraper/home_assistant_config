@@ -53,15 +53,6 @@
   qos: 1
   retain: true
 - platform: mqtt
-  name: "ad_nightstand"
-  command_topic: "/switches/rf/ad_nightstand"
-  state_topic: "/switches/rf/ad_nightstand/state"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 1
-  retain: true
-- platform: mqtt
   name: "stove_right"
   state_topic: "/lights/kitchen/stoveright/state"
   command_topic: "/lights/kitchen/stoveright"
