@@ -97,24 +97,24 @@
   optimistic: false
   qos: 1
   retain: true
-- platform: mqtt
-  name: "Tree Solid Lights"
-  state_topic: "/switches/rf/tree_solid/state"
-  command_topic: "/switches/rf/tree_solid"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 1
-  retain: true
-- platform: mqtt
-  name: "Tree Twinkle Lights"
-  state_topic: "/switches/rf/tree_twinkle/state"
-  command_topic: "/switches/rf/tree_twinkle"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 1
-  retain: true
+#- platform: mqtt
+#  name: "Tree Solid Lights"
+#  state_topic: "/switches/rf/tree_solid/state"
+#  command_topic: "/switches/rf/tree_solid"
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  optimistic: false
+#  qos: 1
+#  retain: true
+#- platform: mqtt
+#  name: "Tree Twinkle Lights"
+#  state_topic: "/switches/rf/tree_twinkle/state"
+#  command_topic: "/switches/rf/tree_twinkle"
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  optimistic: false
+#  qos: 1
+#  retain: true
 - platform: wake_on_lan
   mac_address: "6c-f0-49-0b-97-5c"
   name: "Gigabyte"
