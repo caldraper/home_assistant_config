@@ -16,6 +16,6 @@ action:
     - switch.sink_right
     - switch.sink_left
     - switch.6p_charger
-    - switch.tree_solid_lights
-    - switch.tree_twinkle_lights
     - switch.pantry
+#    - switch.tree_solid_lights
+#    - switch.tree_twinkle_lights

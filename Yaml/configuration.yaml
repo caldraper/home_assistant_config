@@ -117,17 +117,18 @@ automation: !include automation.yaml
 switch: !include switches.yaml
 
 light:
- - platform: mqtt
-   name: "ESP LEDs"
-   command_topic: "esp/mqttstrip/setpower"
-   state_topic: "esp/mqttstrip/setpowerpub"
-   rgb_state_topic: "esp/mqttstrip/setcolorpub"
-   rgb_command_topic: "esp/mqttstrip/setcolor"
-   brightness_state_topic: "esp/mqttstrip/setbrightnesspub"
-   brightness_command_topic: "esp/mqttstrip/setbrightness"
-   optimistic: false
  - platform: lifx
    broadcast: 10.10.10.255
+# - platform: mqtt
+#   name: "ESP LEDs"
+#   command_topic: "esp/mqttstrip/setpower"
+#   state_topic: "esp/mqttstrip/setpowerpub"
+#   rgb_state_topic: "esp/mqttstrip/setcolorpub"
+#   rgb_command_topic: "esp/mqttstrip/setcolor"
+#   brightness_state_topic: "esp/mqttstrip/setbrightnesspub"
+#   brightness_command_topic: "esp/mqttstrip/setbrightness"
+#   optimistic: false
+
 
 group: !include groups.yaml
 

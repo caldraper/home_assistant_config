@@ -11,8 +11,8 @@ sequence:
       - switch.bedroom_fan
       - switch.guestroom_fan
       - switch.pantry
-      - switch.tree_solid_lights
-      - switch.tree_twinkle_lights
+#      - switch.tree_solid_lights
+#      - switch.tree_twinkle_lights
 - service: input_select.select_option
   entity_id: input_select.hyperion_effect
   data_template: 
