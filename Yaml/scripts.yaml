@@ -1,7 +1,0 @@
-refresh_devices: !include scripts/refresh_devices.yaml
-low_battery: !include scripts/low_battery.yaml
-bedtime_anthony: !include scripts/bedtime_anthony.yaml
-awake_anthony: !include scripts/wake_anthony.yaml
-cab_lights_off_night: !include scripts/cab_lights_off_night.yaml
-suspend_gigabyte: !include scripts/suspend_gigabyte.yaml
-home_after_dark: !include scripts/home_after_dark.yaml

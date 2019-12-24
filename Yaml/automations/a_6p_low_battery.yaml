@@ -1,7 +1,0 @@
-alias: "6p low battery"
-trigger:
-  - platform: numeric_state
-    entity_id: sensor.Battery_6p
-    below: 20
-action:
-  service: script.low_battery

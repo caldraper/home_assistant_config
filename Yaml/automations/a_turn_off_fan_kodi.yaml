@@ -1,9 +1,0 @@
-alias: "Turn Off Fan - Kodi" 
-trigger:
-  platform: state
-  entity_id: media_player.kodi
-  from: "idle"
-  to: "playing"
-action:
-  service: switch.turn_off
-  entity_id: switch.lr_fan

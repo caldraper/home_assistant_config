@@ -1,8 +1,0 @@
-alias: "Anthony Awake"
-trigger:
-  platform: state
-  entity_id: input_select.anthony_status
-  from: "sleeping"
-  to: "standby"
-action:
-  service: script.awake_anthony

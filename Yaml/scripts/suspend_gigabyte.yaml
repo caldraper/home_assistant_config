@@ -1,3 +1,0 @@
-alias: "Suspend Gigabyte"
-sequence:
-- service: shell_command.suspend_gigabyte
